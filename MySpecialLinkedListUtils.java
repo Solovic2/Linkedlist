@@ -26,7 +26,7 @@ public class MySpecialLinkedListUtils {
             count++;
         }
         average=sum/count;
-      double [] Ar= new double [4];
+      int [] Ar= new int [4];
       Ar[0]=sum;
       Ar[1]=max;
       Ar[2]=min;
