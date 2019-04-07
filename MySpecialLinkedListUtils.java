@@ -4,11 +4,11 @@ public class MySpecialLinkedListUtils {
     public  int count=0;
     public static double[]summary (linkedListNode head){
         LinkedListNode i =head;
-        public  int sum;
-        public  double average;
-        public  int madien;
-        public  int max=0;
-        public  int min=0;
+          int sum;
+          double average;
+          int madien;
+          int max=0;
+          int min=0;
         if(i!=null){
             max=i.value;
             min=max;
@@ -54,12 +54,12 @@ public class MySpecialLinkedListUtils {
     }
     public static boolean palandrom (linkedListNode head){
         linkedListNode i = head;
-        public int c=0;
+         int c=0;
         while(i!=null){
             a[c++]=i.value;
             i=i.next;
         }
-        public int d=0;
+         int d=0;
         for(int j=0;j<count/2;j++){
             if(a[j]=a[count-j-1]){
                 d++;
@@ -175,7 +175,7 @@ public class MySpecialLinkedListUtils {
         }
 
         linkedListNode f = head;
-        puclic int d=0;
+         int d=0;
         while(f!=null){
             f.value=a[d++];
             f=f.next;
