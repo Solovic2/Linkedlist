@@ -71,9 +71,7 @@ public class MySpecialLinkedListUtils {
             return false;
         }
     }
-    public static LinkedListNode insertion(linkedListNode head){
 
-    }
     public static LinkedListNode evenIndexedElement (LinkedListNode head){
         linkedListNode i = head;
         linkedListNode j = i.next;
@@ -130,8 +128,8 @@ public class MySpecialLinkedListUtils {
         void merge(int a[], int l, int m, int r){
             int n1 = m - l + 1;
             int n2 = r - m;
-            int []L = new int [n1];
-            int []R = new int [n2];
+            int [] L = new int [n1];
+            int [] R = new int [n2];
             for (int i=0; i<n1; ++i) {
                 L[i] = a[l + i];
             }
@@ -182,5 +180,6 @@ public class MySpecialLinkedListUtils {
             f.value=a[d++];
             f=f.next;
         }
+       return head;
     }
 }
