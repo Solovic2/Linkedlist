@@ -86,12 +86,17 @@ public class MySpecialLinkedListUtils {
     public static LinkedListNode evenIndexedElement (LinkedListNode head){
         LinkedListNode i = head;
         LinkedListNode j = i.next;
-        while(i!=null || j!=null ){
-            i.next=j.next;
-            i=i.next;
-            if(i!=null)
-                j=i.next;
-        }
+              LinkedListNode i = head;
+        LinkedListNode prev = null;
+        LinkedListNode  next1= null;
+  
+        while (i != null) { 
+            next1 = i.next; 
+            i.next = prev; 
+            prev = i; 
+            i = next1; 
+        } 
+        head = prev; 
         return head;
     }
     public  LinkedListNode removeCentralNode(LinkedListNode head){
