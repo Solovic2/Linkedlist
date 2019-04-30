@@ -50,17 +50,16 @@ public class MySpecialLinkedListUtils {
 
     public  LinkedListNode reverse (LinkedListNode head){
         LinkedListNode i = head;
-        LinkedListNode j = i.next;
-        LinkedListNode temp;
-        while(i!=null || j!=null){
-            temp=j.next;
-            i=j;
-            j=temp;
-        }
-        head.next=null;
-        head=i;
-        i.next=null;
-
+        LinkedListNode prev = null;
+        LinkedListNode  next1= null;
+  
+        while (i != null) { 
+            next1 = i.next; 
+            i.next = prev; 
+            prev = i; 
+            i = next1; 
+        } 
+        head = prev; 
         return head;
     }
     public  boolean palandrom (LinkedListNode head){
@@ -86,18 +85,17 @@ public class MySpecialLinkedListUtils {
     public static LinkedListNode evenIndexedElement (LinkedListNode head){
         LinkedListNode i = head;
         LinkedListNode j = i.next;
-              LinkedListNode i = head;
-        LinkedListNode prev = null;
-        LinkedListNode  next1= null;
-  
-        while (i != null) { 
-            next1 = i.next; 
-            i.next = prev; 
-            prev = i; 
-            i = next1; 
-        } 
-        head = prev; 
+        while(i!=null && j!=null ){
+        
+        
+            i.next=j.next;
+            i=i.next;
+           
+            if(i!=null)
+                j=i.next;
+        }
         return head;
+             
     }
     public  LinkedListNode removeCentralNode(LinkedListNode head){
         LinkedListNode i = head;
@@ -124,8 +122,9 @@ public class MySpecialLinkedListUtils {
         LinkedListNode j = i.next;
         LinkedListNode temp;
         for(int f=0;f<count;f++){
-            while(i!=null || j!=null){
+            while(i!=null && j!=null){
                 if(i.value>j.value){
+                    if
                     temp=j.next;
                     j.next=i;
                     i.next=temp;
